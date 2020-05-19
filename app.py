@@ -1,5 +1,6 @@
 from datetime import datetime
 
+import os
 import pandas as pd
 import requests
 from flask import Flask, request, abort
@@ -305,4 +306,5 @@ def get_best_fc_interest_rate(currency):
 
 
 if __name__ == "__main__":
-    app.run()
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
