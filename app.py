@@ -19,7 +19,7 @@ app = Flask(__name__)
 
 line_bot_api = LineBotApi('WYgUqf3oeZSWtT46tDRCfD9cbz3gfjbFwnC/XGnzB9eezBCuQZPVXrJuo0QEG7J9dkUDUP74vUAGObSG9Y67xPMorJckpPpevqOVZ9vJa949IqJCDOA6bb+2na0P9JtYrynr5GFk988K/1Op4fHb3AdB04t89/1O/w1cDnyilFU=')
 handler = WebhookHandler('0fb74817905a6337503a3171cf839995')
-line_bot_api.push_message('Uec6dc33e6ded615b86113bfd24c71598', TextSendMessage(text='你可以開始了'))
+line_bot_api.push_message('Uec6dc33e6ded615b86113bfd24c71598', TextSendMessage(text='請稍等...'))
 
 
 @app.route("/callback", methods=['POST'])
@@ -97,9 +97,9 @@ def handle_message(event):
         目前淨值 = 0
 
         my_stocks = {
-            '1101': 39.00,
-            '1102': 38.60,
-            '1103': 15.10
+            '5530': 63.50,
+            '2887': 13.90,
+            '5880': 20.50
         }
 
         message = '【我的股票】'
